@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+
+  <form action="" name="feedback">
+    <fieldset>
+      <legend>Contact info</legend>
+      <p>
+        First name: <input type="text" maxlength="10" placeholder="anonymous" name="fname" required>
+      </p>
+      <p>
+        Last name: <input type="text" maxlength="10" placeholder="anonymous" name="lname" required>
+      </p>
+      <p>
+        Email: <input type="email" placeholder="name@domain.com" name="mail">
+      </p>
+    </fieldset>
+    <p>
+      Password: <input type="password" maxlength="20" placeholder="anonymous" name="password" required>
+    </p>
+   
+    <h3>Will you recommend this site?</h3>
+    <p>
+      <input type="radio" value="yes">yes
+      <input type="radio" value="no">no
+    </p>
+    <h3>Select your favorite website below:</h3>
+    <p>
+      <select name="website-selection-box" size="4" multiple>
+        <option value="Google">Google</option>
+        <option value="Facebook">Facebook</option>
+        <option value="Twitter">Twitter</option>
+        <option value="Espn">Espn</option>
+        <option value="Amazon">Amazon</option>
+        <option value="Youtube">Youtube</option>
+        <option>Safari</option>
+      </select>
+    </p>
+    <h3>Rate the website on a scale of 1 to 10</h3>
+    <p>
+    <p>Favorite scores: <input type="range" name="rating" min="1" max="10">10</p>
+    </p>
+    <h3>Additional Comments</h3>
+    <p>
+      <textarea name="comment" cols="30" rows="10"></textarea>
+    </p>
+    <h3>Restaurants</h3>
+    <p>
+      <select name="restaurant-dropdown-box">
+        <option value="Chick-Fil-A">Chick-Fil-A</option>
+        <option value="Mcdonald's">Mcdonald's</option>
+        <option value="Pablo's">Pablo's</option>
+        <option value="Burger King">Burger King</option>
+        <option value="Sonic">Sonic</option>
+        <option value="Wendy's">Wendy's</option>
+        <option value="Hardees">Hardees</option>
+      </select>
+    </p>
+  
+    <p>
+      <input type="submit">
+    </p>
+  </form>
+
+</body>
+
+</html>
