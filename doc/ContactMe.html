@@ -15,19 +15,19 @@
     <fieldset>
       <legend>Contact info</legend>
       <p>
-        First name: <input type="text" maxlength="10" placeholder="anonymous" name="fname" required>
+        First name*: <input type="text" maxlength="10" placeholder="anonymous" name="fname" required>
       </p>
       <p>
-        Last name: <input type="text" maxlength="10" placeholder="anonymous" name="lname" required>
+        Last name*: <input type="text" maxlength="10" placeholder="anonymous" name="lname" required>
       </p>
       <p>
-        Email: <input type="email" placeholder="name@domain.com" name="mail">
+        Email*: <input type="email" placeholder="name@domain.com" name="mail">
       </p>
     </fieldset>
     <p>
-      Password: <input type="password" maxlength="20" placeholder="anonymous" name="password" required>
+      Password*: <input type="password" maxlength="20" placeholder="anonymous" name="password" required>
     </p>
-   
+
     <h3>Will you recommend this site?</h3>
     <p>
       <input type="radio" value="yes">yes
@@ -65,7 +65,15 @@
         <option value="Hardees">Hardees</option>
       </select>
     </p>
-  
+    <p>
+      <input type="checkbox" name="desserts" value="Cream Puffs">Cream Puffs
+      <input type="checkbox" name="desserts" value="M&Ms">M&Ms
+      <input type="checkbox" name="desserts" value="Bundt Cake">Bundt Cake
+      <input type="checkbox" name="desserts" value="Apple Pie">Apple Pie
+      <input type="checkbox" name="desserts" value="Whoopie Pies">Whoopie Pies
+      <input type="checkbox" name="desserts" value="Chiffon Cake">Chiffon Cake
+    </p>
+
     <p>
       <input type="submit">
     </p>
