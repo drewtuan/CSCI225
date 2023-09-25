@@ -9,10 +9,11 @@
 
 <body>
 
+  
   <iframe width="400" height="400" src="video/20230925_102004_1.mp4" allowfullscreen></iframe>
-  <form action="" name="feedback">
-    <fieldset>
-      <legend>Contact info</legend>
+  <form name="form">
+    <fieldset name="fieldset">
+      <legend name="contact-info-legend">Contact info</legend>
       <p>
         First name*: <input type="text" maxlength="10" placeholder="anonymous" name="fname" required>
       </p>
@@ -44,10 +45,12 @@
         <option>Safari</option>
       </select>
     </p>
+
     <h3>Rate the website on a scale of 1 to 10</h3>
     <p>
-    <p>Favorite scores: <input type="range" name="rating" min="1" max="10">10</p>
+      <input type="range" name="rating" min="1" max="10">10
     </p>
+   
     <h3>Additional Comments</h3>
     <p>
       <textarea name="comment" cols="30" rows="10"></textarea>
@@ -74,7 +77,7 @@
     </p>
 
     <p>
-      <input type="submit">
+      <input type="submit" name="submit button">
     </p>
   </form>
 
