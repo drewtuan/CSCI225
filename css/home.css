@@ -2,3 +2,13 @@
   position: fixed;
 }
 
+.introduction.p {
+  float: left;
+}
+
+.introduction.img {
+  float: right;
+  width: 200px;
+  height: 200px;
+}
+
