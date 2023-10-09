@@ -1,17 +1,159 @@
-.introduction, .navbar, footer {
+body {
+  background-image: url("../img/lake.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div.navbar, div.portfolio, div.address{
+  opacity:0.6;
+}
+
+.container {
+  display: grid;
+  grid-template-areas: "portfolio portfolio portfolio portfolio portfolio assignment"
+                       "address address address address address assignment"
+                       "schedule schedule schedule schedule schedule schedule"
+                       "footer footer footer footer footer";
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 0.2fr 1fr 0.1fr;
+}
+
+:root {
+  --web-font: 'Oswald';
+  --list-font-color: hsl(0, 0%, 100%);
+  --list-font-weight: 2em;
+}
+
+p {
+  font-family: var(--web-font), Verdana, Arial;
+  line-height: 2em;
+  text-align:left;
+  color:rgb(255, 255, 255)
+}
+
+ul, ol {
+  color: var(--list-font-color);
+}
+
+a {
+  font-style: oblique;
+  text-decoration: none;
+}
+
+a:hover {
+  font-size: 1.3em;
+  color: rgb(46, 86, 57);
+  font-weight: bold;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-shadow: 4px 5px 3px #546454;
+  color: #fff;
+  background-color: aqua;
+  border-radius: 3px 30px 3px 20px;
+}
+
+
+div.div-with-links {
+  background-color: aquamarine;
+}
+
+div.div-with-links p {
+  display: inline;
+  margin-right: 2em;
+}
+
+div.navbar {
   position: fixed;
+  background-color: #4ddecb;
+  width: 100%;
+  z-index:2;
 }
 
-.introduction.p {
-  float: left;
+div.navbar ul {
+  background-color: #546454;
+  border-radius: 1em;
 }
 
-.introduction.img {
+
+
+div.introduction {
+  position: fixed;
+  background-color: #209bd5;
+  width: 100%;
+  padding: 2%;
+  z-index: 1;
+}
+
+div.introduction h1,p {
+  width: 50%;
+}
+
+div.introduction img {
+  position: relative;
+  bottom: 30%;
+  width: 20%;
   float: right;
-  width: 200px;
-  height: 200px;
 }
 
-.assignment {
-  position: absolute;
+div.portfolio, div.address, div.schedule {
+  border-right: #00aeff;
+  border-bottom: 3px solid #fff;
 }
+
+
+div.portfolio {
+  background-color: #4dde79;
+  grid-area: "portfolio";
+  grid-column: 1 / span 5;
+  padding: 2%;
+}
+
+div.portfolio p {
+  width: 50%;
+}
+
+div.address {
+  background-color: #33e913;
+  padding: 2%;
+  grid-area: "address";
+  grid-column: 1 / span 5;
+}
+
+div.address p {
+  font-size: 1.5em;
+}
+
+div.assignment {
+  background-color: #00f1d1;
+  opacity: 0.8;
+  padding: 2%;
+  grid-area: "assignment";
+  grid-column: 6 / span 1;
+  grid-row: 3 / span 2;
+ 
+}
+
+
+
+div.schedule {
+  background-color: #4dded0;
+  grid-area: "assignment";
+  grid-column: 1 / span 6;
+}
+
+div.schedule table {
+  color: white;
+}
+
+footer {
+  background-color: hsl(169, 98%, 47%);
+  border-radius: 1em;
+  grid-area:"footer";
+  grid-column: 1 / span 7;
+}
+
+
+
+
