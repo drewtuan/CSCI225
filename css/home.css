@@ -1,8 +1,199 @@
 body {
   background-image: url("../img/lake.jpg");
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-size: cover;
 }
+
+@font-face {
+  font-family: "Roboto Bold";
+  src: url("../fonts/Roboto_Condensed/RobotoCondensed-Bold.ttf");
+}
+
+p, li, h1, h2, h3 {
+  font-family:  Arial;
+  color:rgba(255, 255, 255, 0.881);
+}
+
+p {
+  line-height: 1.3em;
+  text-align: left;
+}
+
+p::first-letter {
+  font-size: 1.5em;
+}
+
+h1 {
+  border-radius: 1.2em;
+  text-shadow: 2px 2px rgb(0, 0, 0);
+  text-transform: uppercase;
+}
+
+ul, ol {
+  list-style-type: none;
+  font-weight:bolder;
+}
+
+ul li{
+  font-family: "Oswald";
+}
+
+ol li {
+  font-family: "Oswald";
+}
+
+div.container {
+  display: grid;
+  grid-template: 0.5fr 0.5fr / repeat(2, 0.5fr);
+  position: absolute;
+  top: 90%;
+}
+
+div.navbar, div.introduction, footer {
+  position: fixed;
+  width: 100%;
+}
+
+div.introduction, div.assignment {
+  box-shadow: -5px -6px 5px 4px #3e3c3c;
+}
+
+footer {
+  bottom: -1.4%;
+  background-color: rgba(1, 254, 161, 0.881);
+}
+
+div.navbar {
+  background-color: rgba(0, 255, 255, 0.881);
+  padding: 1.5%;
+  z-index: 1;
+}
+
+div.navbar p {
+  display: inline;
+  margin-right: 1%;
+}
+
+div.navbar ul {
+  margin: 0 auto;
+}
+
+div.navbar ul li {
+  background-color: rgb(55, 88, 68);
+  margin-top: 0.2em;
+  width:fit-content;
+  border-radius: 0.4em;
+}
+
+div.navbar .div-with-links {
+  width: 40%;
+  margin:0 auto;
+}
+
+div.navbar .div-with-links p a {
+  font-size: 1.3em;
+}
+
+div.navbar .div-with-links p a:hover {
+  font-family: "Roboto Bold";
+  font-size: 1.7em;
+}
+
+a {
+  text-decoration: none;
+  font-style:italic;
+}
+
+
+
+div.introduction {
+  background-color: rgb(24, 120, 72);
+  position: fixed;
+  padding: 1em;
+  top: 25%;
+  z-index: 1;
+}
+
+div.introduction div {
+  width: 70%;
+  border:white;
+  float: left;
+}
+
+div.introduction h1,p {
+  width: 50%;
+}
+
+div.introduction img {
+  position: relative;
+  top: 2px;
+  background-color: red;
+  float: right;
+  width: 10%;
+}
+
+
+div.portfolio {
+  background-color:rgba(255, 234, 0, 0.881);
+}
+
+div.portfolio h1 {
+  background-color: rgb(255, 140, 0);
+}
+
+
+div.portfolio h1,h2,ul {
+  text-align: center;
+}
+
+div.assignment {
+  background-color: rgb(233, 179, 122);
+  position: absolute;
+  top: 60%;
+  width: 30%;
+  padding:3%;
+}
+
+div.assignment h1 {
+  background-color: rgb(255, 25, 0);
+}
+
+div.assignment .div-with-file-links {
+  width: 50%;
+}
+
+div.assignment .div-with-file-links p {
+  width: 2em;
+  display:inline-block;
+  margin-left: 1em;
+}
+
+div.assignment .div-with-file-links p:nth-child(2) {
+  margin-left: 7.4em;
+}
+
+div.assignment div.div-with-file-links a:hover {
+  color:rgb(35, 119, 71);
+  font-size: 1.2em;
+  font-weight: bold;
+  font-style:oblique;
+}
+
+
+div.address {
+  background-color: rgb(246, 8, 8);
+}
+
+
+div.portfolio, div.address, div.schedule {
+  border-right: 3px solid #fff;
+  border-bottom:3px solid #fff;
+}
+
+div.schedule h1 {
+  background-color: rgb(31, 130, 71);
+}
+
 
 
 

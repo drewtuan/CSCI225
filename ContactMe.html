@@ -5,81 +5,140 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--bootstrap css-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
 </head>
 
 <body>
 
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="navbar">
+          <!--<ul>
+            <li>Fried Chicken</li>
+            <li>Restaurant Style Tortilla Chips</li>
+            <li>Chocolate Ice Cream</li>
+            <li>Tacos</li>
+            <li>Chicken Fried Rice</li>
+          </ul>-->
   
-  <iframe width="400" height="400" src="video/20230925_102004_1.mp4" allowfullscreen></iframe>
-  <form name="form">
-    <fieldset name="fieldset">
-      <legend name="contact-info-legend">Contact info</legend>
+          <div class="div-with-links">
+            <p>
+              <a href="https://www.usca.edu">USC Aiken Website</a>
+            </p>
+            <p>
+              <a href="#assignment-section">Assignment Section</a>
+            </p>
+            <p>
+              <a href="#contact-information-section">Contact Information Section</a>
+            </p>
+            <p>
+              <a href="https://www.espn.com/">ESPN</a>
+            </p>
+            <p>
+              <a href="https://www.amazon.com/">Amazon</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <iframe width="400" height="400" src="video/20230925_102004_1.mp4" allowfullscreen></iframe>
+      </div>
+      <div class="column">
+        <form name="form">
+      <fieldset name="fieldset">
+        <legend name="contact-info-legend">Contact info</legend>
+        <p>
+          First name*: <input type="text" maxlength="10" placeholder="anonymous" name="fname" required>
+        </p>
+        <p>
+          Last name*: <input type="text" maxlength="10" placeholder="anonymous" name="lname" required>
+        </p>
+        <p>
+          Email*: <input type="email" placeholder="name@domain.com" name="mail">
+        </p>
+      </fieldset>
       <p>
-        First name*: <input type="text" maxlength="10" placeholder="anonymous" name="fname" required>
+        Password*: <input type="password" maxlength="20" placeholder="anonymous" name="password" required>
+      </p>
+
+      <h3>Will you recommend this site?</h3>
+      <p>
+        <input type="radio" value="yes">yes
+        <input type="radio" value="no">no
+      </p>
+      <h3>Select your favorite website below:</h3>
+      <p>
+        <select name="website-selection-box" size="4" multiple>
+          <option value="Google">Google</option>
+          <option value="Facebook">Facebook</option>
+          <option value="Twitter">Twitter</option>
+          <option value="Espn">Espn</option>
+          <option value="Amazon">Amazon</option>
+          <option value="Youtube">Youtube</option>
+          <option>Safari</option>
+        </select>
+      </p>
+
+      <h3>Rate the website on a scale of 1 to 10</h3>
+      <p>
+        <input type="range" name="rating" min="1" max="10">10
+      </p>
+
+      <h3>Additional Comments</h3>
+      <p>
+        <textarea name="comment" cols="30" rows="10"></textarea>
+      </p>
+      <h3>Restaurants</h3>
+      <p>
+        <select name="restaurant-dropdown-box">
+          <option value="Chick-Fil-A">Chick-Fil-A</option>
+          <option value="Mcdonald's">Mcdonald's</option>
+          <option value="Pablo's">Pablo's</option>
+          <option value="Burger King">Burger King</option>
+          <option value="Sonic">Sonic</option>
+          <option value="Wendy's">Wendy's</option>
+          <option value="Hardees">Hardees</option>
+        </select>
       </p>
       <p>
-        Last name*: <input type="text" maxlength="10" placeholder="anonymous" name="lname" required>
+        <input type="checkbox" name="desserts" value="Cream Puffs">Cream Puffs
+        <input type="checkbox" name="desserts" value="M&Ms">M&Ms
+        <input type="checkbox" name="desserts" value="Bundt Cake">Bundt Cake
+        <input type="checkbox" name="desserts" value="Apple Pie">Apple Pie
+        <input type="checkbox" name="desserts" value="Whoopie Pies">Whoopie Pies
+        <input type="checkbox" name="desserts" value="Chiffon Cake">Chiffon Cake
       </p>
+
       <p>
-        Email*: <input type="email" placeholder="name@domain.com" name="mail">
+        <input type="submit" name="submit button">
       </p>
-    </fieldset>
-    <p>
-      Password*: <input type="password" maxlength="20" placeholder="anonymous" name="password" required>
-    </p>
+    </form>
 
-    <h3>Will you recommend this site?</h3>
-    <p>
-      <input type="radio" value="yes">yes
-      <input type="radio" value="no">no
-    </p>
-    <h3>Select your favorite website below:</h3>
-    <p>
-      <select name="website-selection-box" size="4" multiple>
-        <option value="Google">Google</option>
-        <option value="Facebook">Facebook</option>
-        <option value="Twitter">Twitter</option>
-        <option value="Espn">Espn</option>
-        <option value="Amazon">Amazon</option>
-        <option value="Youtube">Youtube</option>
-        <option>Safari</option>
-      </select>
-    </p>
+      </div>
+    
+    
+    </div>
 
-    <h3>Rate the website on a scale of 1 to 10</h3>
-    <p>
-      <input type="range" name="rating" min="1" max="10">10
-    </p>
-   
-    <h3>Additional Comments</h3>
-    <p>
-      <textarea name="comment" cols="30" rows="10"></textarea>
-    </p>
-    <h3>Restaurants</h3>
-    <p>
-      <select name="restaurant-dropdown-box">
-        <option value="Chick-Fil-A">Chick-Fil-A</option>
-        <option value="Mcdonald's">Mcdonald's</option>
-        <option value="Pablo's">Pablo's</option>
-        <option value="Burger King">Burger King</option>
-        <option value="Sonic">Sonic</option>
-        <option value="Wendy's">Wendy's</option>
-        <option value="Hardees">Hardees</option>
-      </select>
-    </p>
-    <p>
-      <input type="checkbox" name="desserts" value="Cream Puffs">Cream Puffs
-      <input type="checkbox" name="desserts" value="M&Ms">M&Ms
-      <input type="checkbox" name="desserts" value="Bundt Cake">Bundt Cake
-      <input type="checkbox" name="desserts" value="Apple Pie">Apple Pie
-      <input type="checkbox" name="desserts" value="Whoopie Pies">Whoopie Pies
-      <input type="checkbox" name="desserts" value="Chiffon Cake">Chiffon Cake
-    </p>
 
-    <p>
-      <input type="submit" name="submit button">
-    </p>
-  </form>
+    
+
+    <!--Boostrap javascript file -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+  </div>
+
+
 
 </body>
 
