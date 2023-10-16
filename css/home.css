@@ -24,7 +24,7 @@ p::first-letter {
 }
 
 h1 {
-  border-radius: 1.2em;
+  border-radius: 12em 1em 12em 1em;
   text-shadow: 2px 2px rgb(0, 0, 0);
   text-transform: uppercase;
 }
@@ -67,6 +67,16 @@ div.navbar {
   background-color: rgba(0, 255, 255, 0.881);
   padding: 1.5%;
   z-index: 1;
+}
+
+div.navbar .list-div {
+  width: 100%;
+}
+
+div.navbar .list-div ul {
+  width:fit-content;
+  margin:0 auto;
+  margin-bottom: 2em;
 }
 
 div.navbar p {
@@ -114,6 +124,10 @@ div.introduction {
   z-index: 1;
 }
 
+div.introduction h1 {
+  background-color: rgb(71, 170, 160);
+}
+
 div.introduction div {
   width: 70%;
   border:white;
@@ -146,10 +160,16 @@ div.portfolio h1,h2,ul {
   text-align: center;
 }
 
+
+div.assignment-section-container {
+  width: 100%;
+}
+
 div.assignment {
   background-color: rgb(233, 179, 122);
   position: absolute;
   top: 60%;
+  left: 30%;
   width: 30%;
   padding:3%;
 }
