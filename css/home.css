@@ -28,6 +28,7 @@ h1 {
   text-shadow: 2px 2px rgb(0, 0, 0);
   text-transform: uppercase;
   transition: font-size 2s ease-in-out 1s;
+  letter-spacing: 0.4em;
 }
 
 h1:hover {
@@ -40,7 +41,10 @@ ul, ol {
 }
 
 ul li{
+  font-size: 1.4em;
+  color:#fff;
   font-family: "Oswald";
+  transition: font-family font-size background-color 3s ease-in 2s;
 }
 
 ol li {
@@ -99,6 +103,12 @@ div.navbar ul li {
   width:fit-content;
   border-radius: 0.4em;
 }
+div.navbar ul li:hover {
+  font-family:"Bebas Neue";
+  font-size: 2em;
+  background-color: rgb(209, 101, 69);
+}
+
 
 div.navbar .div-with-links {
   width: 40%;
@@ -152,7 +162,6 @@ div.introduction img {
   width: 10%;
 }
 
-
 div.portfolio {
   background-color:rgba(255, 234, 0, 0.881);
 }
@@ -183,8 +192,18 @@ div.portfolio, div.address, div.schedule {
 }
 
 
-div.assignment-section-container {
+div.assignment{
   width: 100%;
+}
+
+div.assignment ol li {
+  color: rgb(248, 248, 248);
+}
+
+div.assignment ol li:hover {
+  font-weight: bold;
+  color:rgb(97, 57, 54);
+  font-size: 1.5em;
 }
 
 div.assignment {
@@ -222,7 +241,7 @@ div.assignment div.div-with-file-links a:hover {
 }
 
 div.address {
-  background-color: rgb(246, 8, 8);
+  background-color: rgb(213, 120, 120);
 }
 
 div.address p {
@@ -251,8 +270,8 @@ div.schedule table {
   border-width: 1em;
   padding: 2em 2em;
   empty-cells:show;
- 
 }
+
 
 div.schedule table tr:nth-child(2n) {
   background-color: rgb(246, 102, 59);
@@ -291,6 +310,26 @@ div.schedule table #englishA101, .web-development, .software-engineering,.algori
   vertical-align: top;
 }
 
+div.schedule table #row-2 #englishA101:hover {
+  font-size: 2.6em;
+  color:rgb(0, 251, 230);
+}
+
+div.schedule table #row-4 .web-development:hover {
+  font-size: 2.6em;
+  color:rgb(242, 22, 10);
+}
+
+
+div.schedule table #row-5 .software-engineering:hover {
+  font-size: 2.6em;
+  color:rgb(144, 75, 15);
+}
+
+div.schedule table #row-7 .algorithmic_design:hover {
+  font-size: 2.6em;
+  color:rgb(253, 253, 253);
+}
 
 footer {
   background-color: rgb(128, 52, 129);
