@@ -199,9 +199,15 @@ div.assignment div.div-with-file-links a:hover {
   font-style:oblique;
 }
 
-
 div.address {
   background-color: rgb(246, 8, 8);
+}
+
+div.address a {
+  background-color: aliceblue;
+  width: fit-content;
+  font-family: Georgia;
+  
 }
 
 
@@ -214,8 +220,31 @@ div.schedule h1 {
   background-color: rgb(31, 130, 71);
 }
 
+div.schedule table tr:nth-child(2n) {
+  background-color: rgb(246, 102, 59);
+}
 
+div.schedule table #row-1 td:nth-child(n) {
+  color: white;
+  font-size: 1.5em;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+div.schedule table #row-2 #englishA101 {
+  background-color:rgb(230, 0, 255)
+}
+
+div.schedule table #row-4 .web-development {
+  background-color:rgb(251, 255, 0)
+}
+
+div.schedule table #row-5 .software-engineering{
+  background-color:rgb(0, 255, 191)
+}
+
+div.schedule table #row-7 .algorithmic_design{
+  background-color:rgb(0, 153, 255)
+}
 
 
 
