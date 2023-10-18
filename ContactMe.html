@@ -35,7 +35,7 @@
     <div class="row">
       <div class="col">
        <p>
-        <iframe  width="400" height="400" class="rounded-4" src="video/20230925_102004_1.mp4" allowfullscreen></iframe>
+        <iframe width="400" height="400" class="rounded-4 mt-12" src="video/20230925_102004_1.mp4" allowfullscreen></iframe>
        </p>
       </div>
       <div class="col p-2 g-col-6">
@@ -43,20 +43,18 @@
           <fieldset name="fieldset">
             <legend name="contact-info-legend">Contact info</legend>
 
-            <div class="form-floating mb-12">
+            <div class="form-floating mb-12 fw-bold fs-5">
                 First name*: <input class="form-control" type="text" maxlength="10" placeholder="anonymous" name="fname" id="firstname"
                   required>           
             </div>
 
-            <div class="form-floating mb-10">
+            <div class="form-floating mb-10 mb-12 fw-bold fs-5">
                 Last name*: <input class="form-control" type="text" maxlength="10" placeholder="anonymous" name="lname" id="lastname"
                   required>
             </div>
             
-            <div class="form-group">
-              <p>
+            <div class="form-group mb-12 fw-bold fs-5">
                 Email*: <input class="form-control" type="email" placeholder="name@domain.com" name="mail">
-              </p>
               <small class="form-text text-muted">
                 Your email will not be shared
               </small>
@@ -68,16 +66,16 @@
             </p>
           </div>
           <div class="form-group">
-            <h3>Will you recommend this site?</h3>
+            <h3 class="fw-bold fs-4">Will you recommend this site?</h3>
             <p>
               <label class="form-check-label"><input type="radio" class="form-check-input" name="recommend"
                   value="yes">yes</label>
               <label class="radio-button label"><input type="radio"  class="form-check-input" name="recommend" value="no">no</label>
             </p>
           </div>
-          <h3>Select your favorite website below:</h3>
+          <h3 class="fw-bolder fs-5">Select your favorite website below:</h3>
           <p>
-            <select class="form-control" name="website-selection-box" size="4" multiple>
+            <select class="form-control fst-italic" name="website-selection-box" size="4" multiple>
               <option value="Google">Google</option>
               <option value="Facebook">Facebook</option>
               <option value="Twitter">Twitter</option>
@@ -89,14 +87,14 @@
           </p>
 
           <div class="form-group">
-            <h3>Rate the website on a scale of 1 to 10</h3>
+            <h3 class="fw-bold fs-4">Rate the website on a scale of 1 to 10</h3>
             <p>
               <input class="form-control" type="range" name="rating" min="1" max="10">10
             </p>
           </div>
 
 
-          <h3>Additional Comments</h3>
+          <h3 class="fw-bold fs-4">Additional Comments</h3>
           <p>
             <textarea class="form-control" name="comment" cols="30" rows="10"></textarea>
           </p>
