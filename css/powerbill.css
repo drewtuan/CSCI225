@@ -1,0 +1,35 @@
+body {
+  background-color: rgb(106, 228, 187);
+}
+
+* {
+  font-family: "Nunito Sans";
+}
+
+
+#power-bill-calculator-form {
+  padding: 2em;
+  background-color: rgb(215, 220, 218);
+  width:30%;
+  border-radius: 2em;
+  border:5px solid rgb(127, 126, 126);
+}
+
+
+#power-bill-calculator-form div {
+  margin-bottom: 1em;
+}
+#power-bill-calculator-form #submit-button,#reset-button {
+  padding: 1em 2em;
+}
+
+#details-of-bill-form {
+  padding: 2em;
+  background-color: rgb(215, 220, 218);
+  width:30%;
+  border-radius: 2em;
+  border:5px solid rgb(127, 126, 126);
+}
+
+
+

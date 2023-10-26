@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/powerbill.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="container" id="container-for-form1">
+    <form name="power-bill-calculator-form" id="power-bill-calculator-form">
+      <h1>Georgia Power Bill Calculator</h1>
+      <div id="explanation">
+        <p>The utility bill calculator is a resource that the Commision is making available that allows a consumer to
+          check
+          the accuracy of his/her monthly electric bill. A bill calculator has been prepared for customers of the
+          Georgia Power
+          Company. This bill calculator applies only to residential customers who are receiving service under the
+          standard residential
+          Tariff (R-27). For more details regarding Georgia Power's residential tariff offerings, please visit Georgia
+          Power Pricing & Rates.
+        </p>
+      </div>
+
+    
+      <h4>Effective August 2023</h4>
+
+      <div>
+        <label for="monthly-usage-textbox">Enter your Monthly Usage in kilowatt hours(kWh)*:</label>
+        <input type="text" id="monthly-usage-textbox" name="monthly-usage-textbox">
+      </div>
+
+      <div>
+        <label for="days-for-the-bill-textbox">Enter the number of days for your current billing period*:</label>
+        <input type="text" id="days-for-the-bill-textbox" name="days-for-the-bill-textbox" maxlength="10">
+      </div>
+
+      <div>
+        <label for="inside-city-or-not-checkbox">Is your residence INSIDE the city limits of your city*:</label>
+        <input type="checkbox" id="inside-city-or-not-checkbox" name="inside-city-or-not-checkbox">
+      </div>
+
+      <div>
+        <label for="summer-month-checkbox">Is this a Summer month (June-September)?*</label>
+        <input type="checkbox" id="summer-month-checkbox" name="summer-month-checkbox">
+      </div>
+
+      <div>
+        <label for="sales-tax-textbox">Enter Sales Tax(%)*</label>
+        <input class="form-control" type="text" id="sales-tax-textbox" name="sales-tax-textbox">
+      </div>
+
+    
+        <input type="button" value="submit" id="submit-button" />
+        <input type="button" name="reset" value="Reset" id="reset-button" >
+  
+
+    </form>
+  </div>
+
+  <div class="container" id="container-for-form2">
+    <div class="row">
+      <form name="details-of-bill-form" id="details-of-bill-form">
+        <h1>Details of your bill</h1>
+        <div class="col">
+          Base Charge:
+          <label class="result-label" id="base-charge-label"> ?</label>
+        </div>
+        <div class="col">
+          Tier 1 Component (kWh):
+          <label class="result-label" id="tier1-component-label"></label>
+        </div>
+        <div class="col">
+          Tier 2 Component (kWh):
+          <label class="result-label" id="tier2-component-label"></label>
+        </div>
+        <div class="col">Tier 3 Component (kWh):
+          <label class="result-label" id="tier3-component-label"></label>
+        </div>
+        <div class="col">Base Revenue -- Base Bill Subtotal:
+          <label class="result-label" id="base-revenue-label"></label>
+        </div>
+        <div class="col">Fuel Cost Rider:</div>
+        <div class="col">Demand Side Management Residential Rider:</div>
+        <div class="col">Nuclear Construction Cost Recovery Rider:</div>
+        <div class="col">Environmental Compliance Cost Recovery Rider:</div>
+        <div class="col">Total Revenue -- Current Service Subtotal:</div>
+        <div class="col">Franchise Fee:</div>
+        <div class="col">Total (excluding tax):</div>
+        <div class="col">TOTAL (w/tax):</div>
+      </form>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <script src="js/powerbill.js"></script>
+
+</body>
+
+</html>
