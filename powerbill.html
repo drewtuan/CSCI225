@@ -58,7 +58,7 @@
 
     
         <input type="button" value="submit" id="submit-button" />
-        <input type="button" name="reset" value="Reset" id="reset-button" >
+        <input type="reset" name="reset" value="Reset" id="reset-button" >
   
 
     </form>
@@ -70,7 +70,7 @@
         <h1>Details of your bill</h1>
         <div class="col">
           Base Charge:
-          <label class="result-label" id="base-charge-label"> ?</label>
+          <label class="result-label" id="base-charge-label"></label>
         </div>
         <div class="col">
           Tier 1 Component (kWh):
@@ -86,14 +86,30 @@
         <div class="col">Base Revenue -- Base Bill Subtotal:
           <label class="result-label" id="base-revenue-label"></label>
         </div>
-        <div class="col">Fuel Cost Rider:</div>
-        <div class="col">Demand Side Management Residential Rider:</div>
-        <div class="col">Nuclear Construction Cost Recovery Rider:</div>
-        <div class="col">Environmental Compliance Cost Recovery Rider:</div>
-        <div class="col">Total Revenue -- Current Service Subtotal:</div>
-        <div class="col">Franchise Fee:</div>
-        <div class="col">Total (excluding tax):</div>
-        <div class="col">TOTAL (w/tax):</div>
+        <div class="col">Fuel Cost Rider:
+          <label class="result-label" id="fuel-cost-rider"></label>
+        </div>
+        <div class="col">Demand Side Management Residential Rider:
+          <label class="result-label" id="demand-side-management-residential-rider-label"></label>
+        </div>
+        <div class="col">Nuclear Construction Cost Recovery Rider:
+          <label class="result-label" id="nuclear-construction-cost-recovery-label"></label>
+        </div>
+        <div class="col">Environmental Compliance Cost Recovery Rider:
+          <label class="result-label" id="environmental-compliance-cost-recovery-label"></label>
+        </div>
+        <div class="col">Total Revenue -- Current Service Subtotal:
+          <label class="result-label" id="total-revenue-label"></label>
+        </div>
+        <div class="col">Franchise Fee:
+          <label class="result-label" id="franchise-fee-label"></label>
+        </div>
+        <div class="col">Total (excluding tax):
+          <label class="result-label" id="Total-excluding-tax-label"></label>
+        </div>
+        <div class="col">TOTAL (w/tax):
+          <label class="result-label" id="total-with-tax-label"></label>
+        </div>
       </form>
     </div>
   </div>
