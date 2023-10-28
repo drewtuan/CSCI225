@@ -60,7 +60,11 @@ function calculate_second_tier_component() {
     tier2componentfee = tier2component_monthly_usage * 0.110748;
   } else if(summer_month_checkbox.checked == false && (monthly_usage_in_kwh > 650.0 && monthly_usage_in_kwh <= 1000)) {
     tier2componentfee = tier2component_monthly_usage * 0.062404;
-  } 
+  } else if(summer_month_checkbox.checked && monthly_usage_in_kwh > 1000) {
+    tier2componentfee = tier2component_monthly_usage * 0.110748;
+  } else if(summer_month_checkbox.checked == false && monthly_usage_in_kwh > 1000) {
+    tier2componentfee = tier2component_monthly_usage * 0.062404;
+  }
   return tier2componentfee;
   
 }
