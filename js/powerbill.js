@@ -18,6 +18,9 @@ var franchise_fee_label = document.getElementById("franchise-fee-label");
 var total_excluding_tax_label = document.getElementById("Total-excluding-tax-label");
 var total_with_tax_label = document.getElementById("total-with-tax-label");
 
+// monthly usage
+var monthly_usage_in_kwh = parseFloat(document.getElementById("monthly-usage-textbox").value);
+
 
 // function that calculates the base charge
 function calculate_basecharge() {
@@ -30,8 +33,7 @@ function calculate_basecharge() {
 function calculate_first_tier_component() {
   var tier1componentfee = 0;
   var tier1component_monthly_usage_in_kwh = 0;
-  var monthly_usage_in_kwh = parseFloat(document.getElementById("monthly-usage-textbox").value);
-
+ 
   if(summer_month_checkbox.checked && ((monthly_usage_in_kwh <= 650.0))) {
     tier1component_monthly_usage_in_kwh = monthly_usage_in_kwh;
     tier1componentfee = tier1component_monthly_usage_in_kwh  * 0.066678;
@@ -53,7 +55,6 @@ function calculate_first_tier_component() {
 // function that calculates the second tier component
 function calculate_second_tier_component() {
   var tier2componentfee = 0;
-  var monthly_usage_in_kwh = parseFloat(document.getElementById("monthly-usage-textbox").value);
   var tier2component_monthly_usage = monthly_usage_in_kwh - 650;
   
   if(summer_month_checkbox.checked && (monthly_usage_in_kwh > 650.0 && monthly_usage_in_kwh <= 1000)) {
@@ -73,7 +74,7 @@ function calculate_second_tier_component() {
 function calculate_third_tier_component() {
   var tier3componentfee = 0;
   var tier3component_monthly_usage_in_kwh = 0;
-  let monthly_usage_in_kwh = parseFloat(document.getElementById("monthly-usage-textbox").value);
+  
 
   if(summer_month_checkbox.checked && monthly_usage_in_kwh > 1000) {
     tier3component_monthly_usage_in_kwh = monthly_usage_in_kwh - 1000;
@@ -160,21 +161,32 @@ function calculate_total_with_tax() {
   return total_with_sales_tax;
 }
 
+// function to open a new window when the total cost including tax is more than $500
+function openwindow() {
+  var total = calculate_total_with_tax();
+
+  if(total > 500) {
+      window.open("https://www.georgiapower.com/residential/save-money-and-energy/products-programs.html", "_blank", "location=yes, height=1000, width=1000, scrollbarse=yes, status=yes")
+  }
+}
+
 // function for displaying the fees on their respective labels
 function show_fees() {
-   base_charge_label.textContent = "$" + calculate_basecharge().toFixed(2);
-   tier1_component_label.textContent = "$" + calculate_first_tier_component().toFixed(2);
-   tier2_component_label.textContent = "$" + calculate_second_tier_component().toFixed(2);
-   tier3_component_label.textContent = "$" + calculate_third_tier_component().toFixed(2);
-   base_revenue_label.textContent = "$" + calculate_base_revenue().toFixed(2);
-   fuel_rider_cost_label.textContent = "$" + calculate_fuel_cost_rider().toFixed(2);
-   demand_side_management_residential_rider_label.textContent = "$" + calculate_demand_side_management_residential_rider().toFixed(2);
-   nuclear_construction_cost_recovery_label.textContent = "$" + calculate_nuclear_construction_cost_recovery().toFixed(2);
-   environmental_compliance_cost_recovery_label.textContent = "$" + calculate_environmental_compliance_cost_recovery().toFixed(2);
-   total_revenue_label.textContent = "$" + calculate_total_revenue().toFixed(2);
-   franchise_fee_label.textContent = "$" + calculate_franchise_fee().toFixed(2);
-   total_excluding_tax_label.textContent = "$" + calculate_total_excluding_tax().toFixed(2);
-   total_with_tax_label.textContent = "$" + calculate_total_with_tax().toFixed(2);
+  base_charge_label.textContent = "$" + calculate_basecharge().toFixed(2);
+  tier1_component_label.textContent = "$" + calculate_first_tier_component().toFixed(2);
+  tier2_component_label.textContent = "$" + calculate_second_tier_component().toFixed(2);
+  tier3_component_label.textContent = "$" + calculate_third_tier_component().toFixed(2);
+  base_revenue_label.textContent = "$" + calculate_base_revenue().toFixed(2);
+  fuel_rider_cost_label.textContent = "$" + calculate_fuel_cost_rider().toFixed(2);
+  demand_side_management_residential_rider_label.textContent = "$" + calculate_demand_side_management_residential_rider().toFixed(2);
+  nuclear_construction_cost_recovery_label.textContent = "$" + calculate_nuclear_construction_cost_recovery().toFixed(2);
+  environmental_compliance_cost_recovery_label.textContent = "$" + calculate_environmental_compliance_cost_recovery().toFixed(2);
+  total_revenue_label.textContent = "$" + calculate_total_revenue().toFixed(2);
+  franchise_fee_label.textContent = "$" + calculate_franchise_fee().toFixed(2);
+  total_excluding_tax_label.textContent = "$" + calculate_total_excluding_tax().toFixed(2);
+  total_with_tax_label.textContent = "$" + calculate_total_with_tax().toFixed(2);
+  
+  openwindow();
 }
 
 // function to reset labels.  Press reset button to do this.

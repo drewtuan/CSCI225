@@ -10,7 +10,7 @@ body {
 #power-bill-calculator-form {
   padding: 2em;
   background-color: rgb(215, 220, 218);
-  width:30%;
+  width:40%;
   border-radius: 2em;
   border:5px solid rgb(127, 126, 126);
 }
@@ -24,6 +24,9 @@ body {
 }
 
 #details-of-bill-form {
+  position: absolute;
+  top: 10%;
+  right: 10%;
   padding: 2em;
   background-color: rgb(215, 220, 218);
   width:30%;
