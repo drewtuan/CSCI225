@@ -18,8 +18,7 @@ var franchise_fee_label = document.getElementById("franchise-fee-label");
 var total_excluding_tax_label = document.getElementById("Total-excluding-tax-label");
 var total_with_tax_label = document.getElementById("total-with-tax-label");
 
-// monthly usage
-var monthly_usage_in_kwh = parseFloat(document.getElementById("monthly-usage-textbox").value);
+
 
 
 // function that calculates the base charge
@@ -32,7 +31,9 @@ function calculate_basecharge() {
 // function that calculates the first tier component
 function calculate_first_tier_component() {
   var tier1componentfee = 0;
+  var monthly_usage_in_kwh = parseFloat(document.getElementById("monthly-usage-textbox").value);
   var tier1component_monthly_usage_in_kwh = 0;
+  
  
   if(summer_month_checkbox.checked && ((monthly_usage_in_kwh <= 650.0))) {
     tier1component_monthly_usage_in_kwh = monthly_usage_in_kwh;
@@ -55,16 +56,18 @@ function calculate_first_tier_component() {
 // function that calculates the second tier component
 function calculate_second_tier_component() {
   var tier2componentfee = 0;
+  var monthly_usage_in_kwh = parseFloat(document.getElementById("monthly-usage-textbox").value);
   var tier2component_monthly_usage = monthly_usage_in_kwh - 650;
+ 
   
   if(summer_month_checkbox.checked && (monthly_usage_in_kwh > 650.0 && monthly_usage_in_kwh <= 1000)) {
     tier2componentfee = tier2component_monthly_usage * 0.110748;
   } else if(summer_month_checkbox.checked == false && (monthly_usage_in_kwh > 650.0 && monthly_usage_in_kwh <= 1000)) {
     tier2componentfee = tier2component_monthly_usage * 0.062404;
   } else if(summer_month_checkbox.checked && monthly_usage_in_kwh > 1000) {
-    tier2componentfee = tier2component_monthly_usage * 0.110748;
+    tier2componentfee = (350) * 0.110748;
   } else if(summer_month_checkbox.checked == false && monthly_usage_in_kwh > 1000) {
-    tier2componentfee = tier2component_monthly_usage * 0.062404;
+    tier2componentfee = (350) * 0.062404;
   }
   return tier2componentfee;
   
@@ -74,7 +77,7 @@ function calculate_second_tier_component() {
 function calculate_third_tier_component() {
   var tier3componentfee = 0;
   var tier3component_monthly_usage_in_kwh = 0;
-  
+  var monthly_usage_in_kwh = parseFloat(document.getElementById("monthly-usage-textbox").value);
 
   if(summer_month_checkbox.checked && monthly_usage_in_kwh > 1000) {
     tier3component_monthly_usage_in_kwh = monthly_usage_in_kwh - 1000;
