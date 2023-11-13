@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/realestate.css">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="container">
+    <a class="button" id="buy_button">Buy</a>
+    <a class="button" id="sale-button">Sale</a>
+    <a class="button" id="loan-button">Loan</a>
+    <a class="button" id="about-button">About</a>
+  </div>
+
+  <div id="loan-calculator">
+    <form>
+      <p>
+        <label for="Loan_amount_textbox">Loan Amount:</label>
+        <input type="text" class="textbox" id="Loan_amount_textbox" name="Loan_amount_textbox">
+        <label>$</label>
+      </p>
+
+      <p>
+        <label for="Interest_rate_textbox">Interest Rate:</label>
+        <input type="text" class="textbox" id="Interest_rate_textbox" name="Interest_rate_textbox">
+        <label>%</label>
+      </p>
+
+      <p>
+        <label for="Loan_term_textbox">Loan term:</label>
+        <input type="text" class="textbox" id="Loan_term_textbox" name="Loan_term_textbox">
+        <label>Years</label>
+      </p>
+    
+      <p>
+        <label for="month_drop-down_list">Start date:</label>
+        <select name="month_drop-down_list" id="month_drop-down_list">
+          <option value="January" class="month_option">January</option>
+          <option value="February" class="month_option">February</option>
+          <option value="March" class="month_option">March</option>
+          <option value="April" class="month_option">April</option>
+          <option value="May" class="month_option">May</option>
+          <option value="June" class="month_option">June</option>
+          <option value="July" class="month_option">July</option>
+          <option value="August" class="month_option">August</option>
+          <option value="September" class="month_option">September</option>
+          <option value="October" class="month_option">October</option>
+          <option value="November" class="month_option">November</option>
+          <option value="December" class="month_option">December</option>
+        </select>
+        
+        <select name="year_drop-down_list" id="year_drop-down_list">
+          <option value="2011" class="year_option">2011</option>
+          <option value="2012" class="year_option">2012</option>
+          <option value="2013" class="year_option">2013</option>
+          <option value="2014" class="year_option">2014</option>
+          <option value="2015" class="year_option">2015</option>
+          <option value="2016" class="year_option">2016</option>
+          <option value="2017" class="year_option">2017</option>
+          <option value="2018" class="year_option">2018</option>
+          <option value="2019" class="year_option">2019</option>
+          <option value="2020" class="year_option">2020</option>
+          <option value="2021" class="year_option">2021</option>
+          <option value="2022" class="year_option">2022</option>
+          <option value="2023" class="year_option">2023</option>
+        </select>
+      </p>
+
+      <p>
+        <input type="button" value="Calculate" id="calculate-button">
+      </p>
+    </form>
+  </div>
+
+  <div id="div-with-table">
+
+  </div>
+
+
+  <script src="js/realestate.js"></script>
+</body>
+</html>

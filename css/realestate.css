@@ -1,0 +1,70 @@
+body {
+  background-image: url("../img/Estate.jpg");
+  background-size: cover;
+}
+
+#container {
+  position: absolute;
+  top: 2%;
+}
+
+#container .button {
+  padding: 1em 2em;
+  background-color: rgb(252, 169, 3);
+  color: white;
+  border-radius: 0.8em;
+  border: 2px solid rgb(105, 82, 71);
+}
+
+#container #loan-button {
+  cursor:pointer;
+}
+
+#container #loan-button:hover {
+  background-color: rgb(138, 49, 11);
+  text-decoration: underline;
+}
+
+#loan-calculator .textbox {
+  width: 40%;
+}
+
+#loan-calculator {
+  background-color: rgb(10, 250, 242);
+  width: 20%;
+  padding: 2%;
+  position: absolute;
+  left: 40%;
+  top: 20%;
+  opacity:0.92;
+  border: 5px solid rgb(5, 56, 111);
+  visibility:hidden;
+}
+
+#calculate-button {
+  width: 100%;
+  padding: 1%;
+  color: white;
+  background-color: rgb(10, 154, 250);
+  font-size: 1em;
+  margin-top: 1%;
+}
+
+#div-with-table {
+  width: 100%;
+  position: absolute;
+  bottom: 10%;
+  left: 40%;
+}
+
+#div-with-table table {
+  background-color:rgb(196, 212, 223);
+  width: 40%;
+  border: 1px solid black;
+}
+
+#div-with-table table td {
+  width: 25%;
+  margin: 0 auto;
+  border: 1px solid black;
+}
