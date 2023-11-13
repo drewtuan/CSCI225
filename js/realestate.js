@@ -185,22 +185,13 @@ function generateYearTable() {
       annual_interest += interest_paid_per_month;
       annual_principal += principal_paid_per_month;
     }
-    table += "<td>" + year_array[j].textContent + "</td>" + "<td>" + annual_interest.toFixed(2) + "</td>" + "<td>" + annual_principal.toFixed(2) + "</td>" + "<td>" + balance.toFixed(2) + "</td>";
+    table += "<td>"  + year_array[j].textContent + "</td>" + "<td>" + "$" + annual_interest.toFixed(2) + "</td>" + "<td>" + "$" + annual_principal.toFixed(2) + "</td>" + "<td>" + "$" + balance.toFixed(2) + "</td>";
     table += "<tr>";
   }
   table += "</table>";
   document.getElementById("div-with-table").innerHTML = table;
-
-  
- 
-
   
 }
-
-
-
-
-
 
 
 loan_button.addEventListener("click", makeCalculatorVisible, false);

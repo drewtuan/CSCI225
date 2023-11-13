@@ -55,6 +55,8 @@ body {
   position: absolute;
   bottom: 10%;
   left: 40%;
+  box-shadow: 2px 4px;
+  
 }
 
 #div-with-table table {
@@ -66,5 +68,5 @@ body {
 #div-with-table table td {
   width: 25%;
   margin: 0 auto;
-  border: 1px solid black;
+  border: 1px solid rgb(16, 217, 235);
 }
