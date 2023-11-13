@@ -164,8 +164,6 @@ function generateYearTable() {
   var year_array = document.querySelectorAll("option.year_option");
   var index_of_start_month = getStartMonthIndex();
   var index_of_start_year = getStartYearIndex();
-  var annual_interest = 0;
-  var annual_principal = 0;
 
   var balance = parseFloat(loan_amount_textbox.value);
 
@@ -174,18 +172,20 @@ function generateYearTable() {
   
   table += "<table>";
   table += "<tr><td>Date</td><td>Interest</td><td>Principal</td><td>Balance</td></tr>"
-  for(var j = index_of_start_year; j < year_array.length; j++) {
+  for(var i = index_of_start_year; i < year_array.length; i++) {
     table += "<tr>";
     var interest_paid_per_month = 0;
     var principal_paid_per_month = 0;
-    for(var i = index_of_start_month; i < month_array.length; i++) {
+    var annual_interest = 0;
+    var annual_principal = 0;
+    for(var j = index_of_start_month; j < month_array.length; j++) {
       interest_paid_per_month = balance * calculateMonthlyInterestRate();
       principal_paid_per_month = calculateMonthlyPayment() - interest_paid_per_month;
       balance -= principal_paid_per_month;
       annual_interest += interest_paid_per_month;
       annual_principal += principal_paid_per_month;
     }
-    table += "<td>"  + year_array[j].textContent + "</td>" + "<td>" + "$" + annual_interest.toFixed(2) + "</td>" + "<td>" + "$" + annual_principal.toFixed(2) + "</td>" + "<td>" + "$" + balance.toFixed(2) + "</td>";
+    table += "<td>"  + year_array[i].textContent + "</td>" + "<td>" + "$" + annual_interest.toFixed(2) + "</td>" + "<td>" + "$" + annual_principal.toFixed(2) + "</td>" + "<td>" + "$" + balance.toFixed(2) + "</td>";
     table += "<tr>";
   }
   table += "</table>";
