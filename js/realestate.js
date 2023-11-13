@@ -33,119 +33,24 @@ function makeCalculatorVisible() {
 
 // function that returns the start year
 function getStartYearIndex() {
-  let start_year_index = year_dropdown_list.selectedIndex;
-  /*
-  switch (start_year_index) {
-    case 0:
-      year = 2011;
-      break;
-    case 1:
-      year = 2012;
-      break;
-    case 2:
-      year = 2013;
-      break;
-    case 3:
-      year = 2014;
-      break;
-    case 4:
-      year = 2015;
-      break;
-    case 5:
-      year = 2016;
-      break;
-    case 6:
-      year = 2017;
-      break;
-    case 7:
-      year = 2018;
-      break;
-    case 8:
-      year = 2019;
-      break;
-    case 9:
-      year = 2020;
-      break;
-    case 10:
-      year = 2021;
-      break;
-    case 11:
-      year = 2022;
-      break;
-    case 12:
-      year = 2023;
-      break;
-    default:
-      break;
-  }
-  console.log(year);
-
-  return year;
-  */
- return start_year_index;
+  let start_year_index = year_dropdown_list.selectedIndex;  
+  return start_year_index;
 }
 
 function getStartMonthIndex() {
   let start_month_index = month_dropdown_list.selectedIndex;
- /*
-  switch (start_month_index) {
-    case 0:
-      month = "January";
-      break;
-    case 1:
-      month = "February"
-      break;
-    case 2:
-      month = "March";
-      break;
-    case 3:
-      month = "April"
-      break;
-    case 4:
-      month = "May"
-      break;
-    case 5:
-      month = "June";
-      break;
-    case 6:
-      month = "July"
-      break;
-    case 7:
-      month = "August"
-      break;
-    case 8:
-      month = "September";
-      break;
-    case 9:
-      month = "October"
-      break;
-    case 10:
-      month = "November";
-      break;
-    case 11:
-      month = "December";
-      break;
-    default:
-      break;
-  }
-  console.log(month);
-
-  return month;
-  */
- return start_month_index;
+  return start_month_index;
 }
 
 // function that calculates monthly interest
 function calculateMonthlyInterestRate() {
   var monthly_interest_rate = parseFloat(interest_rate_textbox.value) / 1200;
-  //console.log(monthly_interest_rate);
   return monthly_interest_rate;
 }
 
 // function that returns the loan term in years
 function getLoanTerm() {
   let number_of_months = parseFloat(loan_term_textbox.value) * 12;
-  //console.log(number_of_months);
   return number_of_months;
 }
 
@@ -153,21 +58,16 @@ function getLoanTerm() {
 function calculateMonthlyPayment() {
   var mybalance = parseFloat(loan_amount_textbox.value);
   var monthly_payment = (mybalance* (calculateMonthlyInterestRate())) / (1 - (1 + calculateMonthlyInterestRate())**(-getLoanTerm()));
-  //console.log(monthly_payment);
   return monthly_payment;
 }
 
 function generateYearTable() {
 
   var month_array = document.querySelectorAll("option.month_option");
-  //console.log(month_array);
   var year_array = document.querySelectorAll("option.year_option");
   var index_of_start_month = getStartMonthIndex();
   var index_of_start_year = getStartYearIndex();
-
   var balance = parseFloat(loan_amount_textbox.value);
-
-
   var table = "";
   
   table += "<table>";
