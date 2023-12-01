@@ -220,13 +220,13 @@ div.assignment h1 {
 }
 
 div.assignment .div-with-file-links {
-  width: 50%;
+  width: 100%;
 }
 
 div.assignment .div-with-file-links p {
   width: 3em;
   display:inline-block;
-  margin-left: 1em;
+  margin-left: 5em;
 }
 
 div.assignment .div-with-file-links p:nth-child(2) {
